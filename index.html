@@ -9,7 +9,12 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-sans antialiased">
+<body class="min-h-screen text-white font-sans antialiased relative">
+    <!-- Contenedor de fondo con imagen generada y overlay oscuro -->
+    <div class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style="background-image: url('teclado_fondo.png');">
+        <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-black/80"></div>
+    </div>
     
     <!-- Contenedor Principal (Reemplaza a CandidoWebsite) -->
     <div>
