@@ -1,16 +1,16 @@
 /* ===== Base & Reset ===== */
 :root {
-    --bg-color: #050505;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
+    --bg-color: #f8fafc; /* Very light blue-gray background */
+    --text-main: #0f172a; /* Dark text for readability */
+    --text-muted: #475569;
     
-    --accent-1: #8b5cf6; /* Purple */
+    --accent-1: #6366f1; /* Vibrant Indigo */
     --accent-2: #ec4899; /* Pink */
-    --accent-3: #06b6d4; /* Cyan */
+    --accent-3: #0ea5e9; /* Light blue */
     
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-glow: rgba(139, 92, 246, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.8);
+    --glass-glow: rgba(99, 102, 241, 0.15);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -148,7 +148,7 @@ h1, h2, h3, h4 {
 }
 .navbar.scrolled {
     padding: 10px 0;
-    background: rgba(5, 5, 5, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -385,10 +385,10 @@ h1, h2, h3, h4 {
 .contact-form textarea {
     width: 100%;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
-    color: white;
+    color: var(--text-main);
     font-family: inherit;
     transition: all 0.3s ease;
 }
