@@ -9,27 +9,30 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen text-white font-sans antialiased relative">
-    <!-- Contenedor de fondo con imagen generada y overlay oscuro -->
+<body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
+    <!-- Contenedor de fondo con imagen generada y overlay azul cielo -->
     <div class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style="background-image: url('teclado_fondo.png');">
-        <div class="absolute inset-0 bg-black/70 mix-blend-multiply"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-black/80"></div>
+        <div class="absolute inset-0 bg-white/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-sky-200/90 via-sky-300/80 to-sky-500/90"></div>
     </div>
     
     <!-- Contenedor Principal (Reemplaza a CandidoWebsite) -->
     <div>
         <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-            <a href="#" class="block w-48 transition-transform hover:scale-105">
+            <a href="index.html" class="block w-48 transition-transform hover:scale-105">
                 <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
             </a>
-            <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors inline-block text-center">Contrátame</a>
+            <div class="flex items-center gap-6">
+                <a href="acerca.html" class="text-sky-900 font-bold hover:text-sky-700 transition-colors">Acerca de Mí</a>
+                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-4 py-2 rounded-md font-medium hover:bg-sky-700 transition-colors inline-block text-center shadow-md">Contrátame</a>
+            </div>
         </header>
 
         <!-- Hero Section -->
         <section class="text-center py-10 px-4 max-w-6xl mx-auto flex flex-col items-center">
             <img src="logo.png" alt="Cándido Escamilla Logo Principal" class="w-full max-w-md mb-8 drop-shadow-[0_0_30px_rgba(168,85,247,0.6)] animate-pulse">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-4 font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Tecladista Versátil</h2>
-            <p class="text-xl mb-8 font-light tracking-wide shadow-black drop-shadow-md">Música en vivo para todo tipo de eventos</p>
+            <p class="text-xl mb-8 font-medium tracking-wide text-sky-900 drop-shadow-sm">Música en vivo para todo tipo de eventos</p>
             <a href="#videos" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 text-lg rounded-full font-bold hover:from-purple-500 hover:to-pink-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.5)]">Ver Videos</a>
         </section>
 
@@ -99,9 +102,9 @@
 
         <!-- Contacto -->
         <section class="p-8 text-center py-16">
-            <h2 class="text-4xl font-bold mb-4">Contáctame</h2>
-            <p class="mb-8 text-lg opacity-90">Agenda tu evento hoy mismo</p>
-            <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg inline-block text-center">Enviar Mensaje</a>
+            <h2 class="text-4xl font-bold mb-4 text-sky-900">Contáctame</h2>
+            <p class="mb-8 text-lg text-sky-800">Agenda tu evento hoy mismo</p>
+            <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-sky-600 hover:to-blue-700 transition-colors shadow-lg inline-block text-center transform hover:scale-105">Enviar Mensaje</a>
         </section>
 
         <!-- Footer -->

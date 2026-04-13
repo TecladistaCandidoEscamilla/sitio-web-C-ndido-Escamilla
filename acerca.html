@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí | Cándido Escamilla</title>
+    <!-- Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
+    <!-- Contenedor de fondo con imagen generada y overlay azul cielo -->
+    <div class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style="background-image: url('teclado_fondo.png');">
+        <div class="absolute inset-0 bg-white/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-sky-200/90 via-sky-300/80 to-sky-500/90"></div>
+    </div>
+    
+    <div>
+        <!-- Header -->
+        <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+            <a href="index.html" class="block w-48 transition-transform hover:scale-105">
+                <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-sky-900 font-bold hover:text-sky-700 transition-colors">Inicio</a>
+                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-4 py-2 rounded-md font-medium hover:bg-sky-700 transition-colors inline-block text-center shadow-md">Contrátame</a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="max-w-4xl mx-auto p-8 mt-8 bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-white/50">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/3">
+                    <img src="logo.png" alt="Cándido Escamilla" class="w-full h-auto rounded-2xl shadow-lg drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-sky-900 drop-shadow-sm">Sobre Mí</h1>
+                    <p class="text-lg text-gray-800 mb-4 leading-relaxed font-medium">
+                        Soy <strong>Cándido Escamilla</strong>, tecladista versátil apasionado por llevar la mejor música en vivo a todo tipo de eventos. Con una amplia experiencia en la industria musical, mi objetivo siempre ha sido transformar cualquier celebración en un momento verdaderamente inolvidable.
+                    </p>
+                    <p class="text-lg text-gray-800 mb-4 leading-relaxed">
+                        Mi repertorio abarca diversos géneros diseñados para adaptarse a la atmósfera perfecta: desde eventos sociales, bodas y XV años, hasta shows llenos de animación, cumbias, sonoras y música para bailar. Cada presentación está pensada para conectar con el público y asegurar que todos disfruten al máximo de su fiesta o celebración.
+                    </p>
+                    <p class="text-lg text-gray-800 mb-6 leading-relaxed">
+                        Cuento con equipo profesional, un gran sentido del ritmo y un inmenso entusiasmo por hacer de tu fiesta algo espectacular. ¡La música es el alma de la fiesta, y yo me encargo de ponerla a sonar!
+                    </p>
+                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-full font-bold hover:from-sky-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i data-lucide="music" class="w-5 h-5"></i>
+                        Reserva tu Fecha
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contratame Bottom -->
+        <section class="max-w-4xl mx-auto p-8 mt-12 text-center bg-gradient-to-r from-sky-200/50 to-blue-200/50 rounded-3xl shadow-sm border border-sky-100">
+             <h2 class="text-2xl font-bold mb-4 text-sky-900">¿Estás buscando música para tu próximo evento?</h2>
+             <p class="mb-6 text-sky-800">Contáctame y platícame de qué se trata para ofrecerte el mejor repertorio.</p>
+             <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-white text-sky-700 px-8 py-3 rounded-full font-bold hover:bg-sky-50 transition-colors shadow-md inline-block text-center transform hover:-translate-y-1">Hablemos por WhatsApp</a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center p-6 text-sm opacity-80 mt-10 text-sky-900 font-semibold mb-6">
+            © 2026 Cándido Escamilla - Tecladista Versátil
+        </footer>
+    </div>
+
+    <!-- Script de inicialización -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
