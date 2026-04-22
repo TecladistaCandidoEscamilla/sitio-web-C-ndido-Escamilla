@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
     <!-- Contenedor de fondo con imagen generada y overlay azul cielo -->
@@ -18,50 +19,90 @@
     
     <!-- Contenedor Principal (Reemplaza a CandidoWebsite) -->
     <div>
-        <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-            <a href="index.html" class="block w-48 transition-transform hover:scale-105">
-                <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            </a>
-            <div class="flex items-center gap-6">
-                <a href="acerca.html" class="text-sky-900 font-bold hover:text-sky-700 transition-colors">Acerca de Mí</a>
-                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-4 py-2 rounded-md font-medium hover:bg-sky-700 transition-colors inline-block text-center shadow-md">Contrátame</a>
+    <!-- Contenedor Principal -->
+    <div class="relative">
+        <header class="sticky top-0 z-50 p-4 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-white/20">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <a href="index.html" class="block w-40 md:w-48 transition-transform hover:scale-105">
+                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-md">
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sky-900 font-bold hover:text-sky-600 transition-colors relative group">
+                        Inicio
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="acerca.html" class="text-sky-900 font-bold hover:text-sky-600 transition-colors relative group">
+                        Acerca de Mí
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-sky-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-sky-200 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                        Contrátame
+                    </a>
+                </nav>
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <a href="https://wa.link/776s3i" target="_blank" class="bg-sky-600 text-white p-2 rounded-full shadow-md">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
         </header>
 
         <!-- Hero Section -->
-        <section class="text-center py-10 px-4 max-w-6xl mx-auto flex flex-col items-center">
-            <img src="Imagenes/perfil_amarillo.png" alt="Cándido Escamilla" class="w-full max-w-lg mb-8 drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Tecladista Versátil</h2>
-            <p class="text-xl mb-8 font-medium tracking-wide text-sky-900 drop-shadow-sm">Música en vivo para todo tipo de eventos</p>
-            <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 text-lg rounded-full font-bold hover:from-purple-500 hover:to-pink-500 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(168,85,247,0.5)]">Ver Videos</a>
+        <section class="relative text-center py-16 md:py-24 px-4 max-w-6xl mx-auto flex flex-col items-center overflow-hidden">
+            <div class="halo-effect animate-float mb-10 w-full max-w-md">
+                <img src="Imagenes/perfil_amarillo.png" alt="Cándido Escamilla" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(14,165,233,0.3)] rounded-3xl">
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800">
+                    Tecladista Versátil
+                </h2>
+                <p class="text-xl md:text-2xl mb-10 font-semibold text-sky-900/80 max-w-2xl mx-auto leading-relaxed">
+                    Elevando tus momentos especiales con la mejor música en vivo y una experiencia inolvidable.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" rel="noopener noreferrer" class="bg-sky-900 text-white px-10 py-4 rounded-full font-bold hover:bg-sky-800 transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-2">
+                        <i data-lucide="play-circle"></i> Ver Videos
+                    </a>
+                    <a href="https://wa.link/776s3i" target="_blank" class="bg-white text-sky-900 border-2 border-sky-900/10 px-10 py-4 rounded-full font-bold hover:bg-sky-50 transition-all transform hover:scale-105 shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="calendar"></i> Reservar Fecha
+                    </a>
+                </div>
+            </div>
         </section>
 
         <!-- Servicios -->
-        <section class="grid md:grid-cols-3 gap-6 p-8 max-w-6xl mx-auto">
-            <!-- Card 1 -->
-            <div class="bg-white text-black rounded-2xl shadow-lg border border-gray-100 transition-transform transform hover:-translate-y-1">
-                <div class="p-6 text-center">
-                    <i data-lucide="music" class="mx-auto mb-4 w-10 h-10 text-purple-600"></i>
-                    <h3 class="text-xl font-bold mb-2">Eventos Sociales</h3>
-                    <p class="text-gray-600">Bodas, XV años, cumpleaños y más</p>
-                </div>
+        <section class="py-16 px-6 max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-sky-950 mb-4">Servicios Profesionales</h3>
+                <div class="w-20 h-1.5 bg-sky-500 mx-auto rounded-full"></div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white text-black rounded-2xl shadow-lg border border-gray-100 transition-transform transform hover:-translate-y-1">
-                <div class="p-6 text-center">
-                    <i data-lucide="video" class="mx-auto mb-4 w-10 h-10 text-pink-500"></i>
-                    <h3 class="text-xl font-bold mb-2">Shows en Vivo</h3>
-                    <p class="text-gray-600">Animación y música profesional</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="premium-card bg-white/40 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-xl flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-200">
+                        <i data-lucide="music" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-sky-950">Eventos Sociales</h3>
+                    <p class="text-sky-900/70 font-medium">Hacemos que tu boda, XV años o cumpleaños sea mágico con un repertorio totalmente personalizado.</p>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="bg-white text-black rounded-2xl shadow-lg border border-gray-100 transition-transform transform hover:-translate-y-1">
-                <div class="p-6 text-center">
-                    <i data-lucide="phone" class="mx-auto mb-4 w-10 h-10 text-red-500"></i>
-                    <h3 class="text-xl font-bold mb-2">Contacto Directo</h3>
-                    <p class="text-gray-600">Reserva tu fecha fácilmente</p>
+                <!-- Card 2 -->
+                <div class="premium-card bg-white/40 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-xl flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-pink-200">
+                        <i data-lucide="mic-2" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-sky-950">Shows en Vivo</h3>
+                    <p class="text-sky-900/70 font-medium">Animación profesional y dinamismo para mantener a todos tus invitados en la pista de baile.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="premium-card bg-white/40 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-xl flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-200">
+                        <i data-lucide="phone-outgoing" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-sky-950">Contacto Directo</h3>
+                    <p class="text-sky-900/70 font-medium">Atención personalizada y asesoría musical para que no tengas que preocuparte por nada.</p>
                 </div>
             </div>
         </section>
@@ -118,8 +159,49 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center p-6 text-sm opacity-80 mt-10">
-            © 2026 Cándido Escamilla - Tecladista Versátil
+        <footer class="bg-sky-950 text-white py-16 px-8 mt-20">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+                <!-- Branding -->
+                <div>
+                    <img src="logo.png" alt="Logo" class="w-40 mb-6 mx-auto md:mx-0 drop-shadow-lg brightness-0 invert">
+                    <p class="text-sky-200/70 font-medium leading-relaxed">
+                        Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.
+                    </p>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Navegación</h4>
+                    <ul class="space-y-4 text-sky-200/80 font-medium">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="acerca.html" class="hover:text-white transition-colors">Acerca de Mí</a></li>
+                        <li><a href="#videos" class="hover:text-white transition-colors">Videos</a></li>
+                        <li><a href="https://wa.link/776s3i" target="_blank" class="hover:text-white transition-colors">Contrataciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Sígueme</h4>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-all transform hover:scale-110">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://wa.link/776s3i" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all transform hover:scale-110">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:scale-110">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all transform hover:scale-110">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-sky-200/50 text-sm">
+                        © 2026 Cándido Escamilla. <br class="md:hidden"> Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
         </footer>
     </div>
 

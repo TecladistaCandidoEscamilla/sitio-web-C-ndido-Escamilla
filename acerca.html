@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
     <!-- Contenedor de fondo con imagen generada y overlay azul cielo -->
@@ -16,15 +17,32 @@
         <div class="absolute inset-0 bg-gradient-to-b from-sky-200/90 via-sky-300/80 to-sky-500/90"></div>
     </div>
     
-    <div>
-        <!-- Header -->
-        <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-            <a href="index.html" class="block w-48 transition-transform hover:scale-105">
-                <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            </a>
-            <div class="flex items-center gap-6">
-                <a href="index.html" class="text-sky-900 font-bold hover:text-sky-700 transition-colors">Inicio</a>
-                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-4 py-2 rounded-md font-medium hover:bg-sky-700 transition-colors inline-block text-center shadow-md">Contrátame</a>
+    <!-- Contenedor Principal -->
+    <div class="relative">
+        <header class="sticky top-0 z-50 p-4 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-white/20">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <a href="index.html" class="block w-40 md:w-48 transition-transform hover:scale-105">
+                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-md">
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sky-900 font-bold hover:text-sky-600 transition-colors relative group">
+                        Inicio
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="acerca.html" class="text-sky-900 font-bold hover:text-sky-600 transition-colors relative group">
+                        Acerca de Mí
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-sky-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-sky-200 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                        Contrátame
+                    </a>
+                </nav>
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <a href="https://wa.link/776s3i" target="_blank" class="bg-sky-600 text-white p-2 rounded-full shadow-md">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -61,8 +79,49 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center p-6 text-sm opacity-80 mt-10 text-sky-900 font-semibold mb-6">
-            © 2026 Cándido Escamilla - Tecladista Versátil
+        <footer class="bg-sky-950 text-white py-16 px-8 mt-20">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+                <!-- Branding -->
+                <div>
+                    <img src="logo.png" alt="Logo" class="w-40 mb-6 mx-auto md:mx-0 drop-shadow-lg brightness-0 invert">
+                    <p class="text-sky-200/70 font-medium leading-relaxed">
+                        Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.
+                    </p>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Navegación</h4>
+                    <ul class="space-y-4 text-sky-200/80 font-medium">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="acerca.html" class="hover:text-white transition-colors">Acerca de Mí</a></li>
+                        <li><a href="index.html#videos" class="hover:text-white transition-colors">Videos</a></li>
+                        <li><a href="https://wa.link/776s3i" target="_blank" class="hover:text-white transition-colors">Contrataciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">Sígueme</h4>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-all transform hover:scale-110">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://wa.link/776s3i" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all transform hover:scale-110">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:scale-110">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all transform hover:scale-110">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-sky-200/50 text-sm">
+                        © 2026 Cándido Escamilla. <br class="md:hidden"> Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
         </footer>
     </div>
 
