@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
-    <!-- Contenedor de fondo con imagen generada y overlay azul cielo -->
-    <div class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style="background-image: url('teclado_fondo.png');">
-        <div class="absolute inset-0 bg-white/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-sky-200/90 via-sky-300/80 to-sky-500/90"></div>
+    <!-- Contenedor de fondo Aurora -->
+    <div class="aurora-bg mesh-gradient">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+        <div class="absolute inset-0 bg-white/40"></div>
     </div>
     
     <!-- Contenedor Principal -->
     <div class="relative">
-        <header class="sticky top-0 z-50 p-4 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-white/20">
+        <header class="sticky top-0 z-50 p-2 md:p-3 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/30 shadow-sm">
             <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <a href="index.html" class="block w-40 md:w-48 transition-transform hover:scale-105">
-                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto drop-shadow-md">
+                <a href="index.html" class="block w-32 md:w-40 transition-transform hover:scale-105">
+                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto">
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="index.html" class="text-sky-900 font-bold hover:text-sky-600 transition-colors relative group">

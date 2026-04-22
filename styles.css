@@ -553,3 +553,40 @@ footer {
     mask-composite: exclude;
     pointer-events: none;
 }
+
+.mesh-gradient {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(202, 100%, 94%, 1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(215, 100%, 96%, 1) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(180, 100%, 95%, 1) 0, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(202, 100%, 92%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(220, 100%, 96%, 1) 0, transparent 50%);
+}
+
+.aurora-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.aurora-blob {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+}
+
+.aurora-1 { background: #e0f2fe; top: -10%; left: -20%; animation: aurora-float 25s infinite alternate; }
+.aurora-2 { background: #f0f9ff; bottom: -10%; right: -20%; animation: aurora-float 30s infinite alternate-reverse; }
+.aurora-3 { background: #ecfeff; top: 30%; left: 30%; animation: aurora-float 22s infinite alternate; }
+
+@keyframes aurora-float {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate(5%, 10%) rotate(10deg) scale(1.1); }
+    100% { transform: translate(-5%, -5%) rotate(-5deg) scale(0.9); }
+}
