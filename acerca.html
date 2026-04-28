@@ -4,138 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Mí | Cándido Escamilla</title>
-    <!-- Tailwind CSS vía CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="description" content="Conoce a Cándido Escamilla — Tecladista versátil profesional con amplia experiencia en la industria musical.">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
-    <!-- Contenedor de fondo Aurora -->
-    <div class="aurora-bg mesh-gradient">
-        <div class="aurora-blob aurora-1"></div>
-        <div class="aurora-blob aurora-2"></div>
-        <div class="aurora-blob aurora-3"></div>
-        <div class="absolute inset-0 bg-white/40"></div>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-blob amb-1"></div>
+        <div class="ambient-blob amb-2"></div>
+        <div class="ambient-blob amb-3"></div>
     </div>
-    
-    <!-- Contenedor Principal -->
-    <div class="relative">
-        <header class="sticky top-0 z-50 py-1.5 px-4 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/30 shadow-sm">
-            <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <a href="index.html" class="block w-28 md:w-32 transition-transform hover:scale-105">
-                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto">
-                </a>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sky-900 text-lg font-bold hover:text-sky-600 transition-colors relative group">
-                        Inicio
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="acerca.html" class="text-sky-900 text-lg font-bold hover:text-sky-600 transition-colors relative group">
-                        Acerca de Mí
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="videos.html" class="text-sky-900 text-lg font-bold hover:text-sky-600 transition-colors relative group">
-                        Videos
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-sky-600 to-blue-700 text-white px-5 py-1.5 rounded-full font-bold text-base hover:shadow-lg hover:shadow-sky-200 transition-all transform hover:-translate-y-0.5 active:scale-95">
-                        Contrátame
-                    </a>
-                </nav>
-                <!-- Mobile Button -->
-                <div class="md:hidden">
-                    <a href="https://wa.link/776s3i" target="_blank" class="bg-sky-600 text-white p-2 rounded-full shadow-md">
-                        <i data-lucide="phone-call" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-        </header>
 
-        <!-- About Section -->
-        <section class="max-w-4xl mx-auto p-8 mt-8 bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-white/50">
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="w-full md:w-1/3">
-                    <img src="Imagenes/perfil_amarillo.png" alt="Cándido Escamilla" class="w-full h-auto drop-shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Inicio</a>
+        <a href="acerca.html" onclick="closeMenu()">Acerca de Mí</a>
+        <a href="videos.html">Videos</a>
+        <a href="https://wa.link/776s3i" target="_blank" class="btn-cta">Contrátame</a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <img src="logo.png" alt="Cándido Escamilla Logo">
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Inicio</a>
+                <a href="acerca.html" class="active">Acerca de Mí</a>
+                <a href="videos.html">Videos</a>
+                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="btn-cta">Contrátame</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section reveal">
+        <div class="about-card">
+            <div class="about-flex">
+                <div class="about-img">
+                    <img src="Imagenes/perfil_amarillo.png" alt="Cándido Escamilla">
                 </div>
-                <div class="w-full md:w-2/3">
-                    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-sky-900 drop-shadow-sm">Sobre Mí</h1>
-                    <p class="text-lg text-gray-800 mb-4 leading-relaxed font-medium">
-                        Soy <strong>Cándido Escamilla</strong>, tecladista versátil apasionado por llevar la mejor música en vivo a todo tipo de eventos. Con una amplia experiencia en la industria musical, mi objetivo siempre ha sido transformar cualquier celebración en un momento verdaderamente inolvidable.
+                <div class="about-text">
+                    <h1>Sobre Mí</h1>
+                    <p>
+                        Soy <strong style="color:var(--gold-primary);">Cándido Escamilla</strong>, tecladista versátil apasionado por llevar la mejor música en vivo a todo tipo de eventos. Con una amplia experiencia en la industria musical, mi objetivo siempre ha sido transformar cualquier celebración en un momento verdaderamente inolvidable.
                     </p>
-                    <p class="text-lg text-gray-800 mb-4 leading-relaxed">
-                        Mi repertorio abarca diversos géneros diseñados para adaptarse a la atmósfera perfecta: desde eventos sociales, bodas y XV años, hasta shows llenos de animación, cumbias, sonoras y música para bailar. Cada presentación está pensada para conectar con el público y asegurar que todos disfruten al máximo de su fiesta o celebración.
+                    <p>
+                        Mi repertorio abarca diversos géneros diseñados para adaptarse a la atmósfera perfecta: desde eventos sociales, bodas y XV años, hasta shows llenos de animación, cumbias, sonoras y música para bailar. Cada presentación está pensada para conectar con el público y asegurar que todos disfruten al máximo.
                     </p>
-                    <p class="text-lg text-gray-800 mb-6 leading-relaxed">
+                    <p>
                         Cuento con equipo profesional, un gran sentido del ritmo y un inmenso entusiasmo por hacer de tu fiesta algo espectacular. ¡La música es el alma de la fiesta, y yo me encargo de ponerla a sonar!
                     </p>
-                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-full font-bold hover:from-sky-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-lg">
-                        <i data-lucide="music" class="w-5 h-5"></i>
-                        Reserva tu Fecha
+                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="display:inline-flex;margin-top:12px;">
+                        <i data-lucide="music"></i> Reserva tu Fecha
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contratame Bottom -->
-        <section class="max-w-4xl mx-auto p-8 mt-12 text-center bg-gradient-to-r from-sky-200/50 to-blue-200/50 rounded-3xl shadow-sm border border-sky-100">
-             <h2 class="text-2xl font-bold mb-4 text-sky-900">¿Estás buscando música para tu próximo evento?</h2>
-             <p class="mb-6 text-sky-800">Contáctame y platícame de qué se trata para ofrecerte el mejor repertorio.</p>
-             <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-white text-sky-700 px-8 py-3 rounded-full font-bold hover:bg-sky-50 transition-colors shadow-md inline-block text-center transform hover:-translate-y-1">Hablemos por WhatsApp</a>
-        </section>
+    <!-- CTA -->
+    <section class="about-cta-section reveal">
+        <div class="cta-box shimmer">
+            <h2>¿Buscas música para tu próximo evento?</h2>
+            <p>Contáctame y platícame de qué se trata para ofrecerte el mejor repertorio.</p>
+            <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary" style="display:inline-flex;">
+                <i data-lucide="message-circle"></i> Hablemos por WhatsApp
+            </a>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="bg-sky-950 text-white py-16 px-8 mt-20">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
-                <!-- Branding -->
-                <div>
-                    <div class="bg-white/10 p-4 rounded-2xl inline-block mb-6">
-                        <img src="logo.png" alt="Logo" class="w-40 drop-shadow-lg">
-                    </div>
-                    <p class="text-sky-200/70 font-medium leading-relaxed">
-                        Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.
-                    </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo Cándido Escamilla">
                 </div>
-
-                <!-- Enlaces Rápidos -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6 text-white">Navegación</h4>
-                    <ul class="space-y-4 text-sky-200/80 font-medium">
-                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
-                        <li><a href="acerca.html" class="hover:text-white transition-colors">Acerca de Mí</a></li>
-                        <li><a href="videos.html" class="hover:text-white transition-colors">Videos</a></li>
-                        <li><a href="https://wa.link/776s3i" target="_blank" class="hover:text-white transition-colors">Contrataciones</a></li>
-                    </ul>
-                </div>
-
-                <!-- Redes Sociales -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6 text-white">Sígueme</h4>
-                    <div class="flex justify-center md:justify-start gap-4">
-                        <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-all transform hover:scale-110">
-                            <i data-lucide="youtube" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://wa.link/776s3i" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all transform hover:scale-110">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:scale-110">
-                            <i data-lucide="facebook" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all transform hover:scale-110">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                    <p class="mt-8 text-sky-200/50 text-sm">
-                        © 2026 Cándido Escamilla. <br class="md:hidden"> Todos los derechos reservados.
-                    </p>
+                <p>Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de Mí</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="https://wa.link/776s3i" target="_blank">Contrataciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Sígueme</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="social-icon" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    <a href="https://wa.link/776s3i" target="_blank" class="social-icon" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+        <p class="footer-copy">© 2026 Cándido Escamilla. Todos los derechos reservados.</p>
+    </footer>
 
-    <!-- Script de inicialización -->
-    <script>
-        lucide.createIcons();
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

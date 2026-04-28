@@ -4,142 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos | Cándido Escamilla</title>
-    <!-- Tailwind CSS vía CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="description" content="Galería de videos de Cándido Escamilla — Presentaciones en vivo, shows y eventos musicales.">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen text-gray-900 font-sans antialiased relative bg-sky-50">
-    <!-- Contenedor de fondo Aurora -->
-    <div class="aurora-bg mesh-gradient">
-        <div class="aurora-blob aurora-1"></div>
-        <div class="aurora-blob aurora-2"></div>
-        <div class="aurora-blob aurora-3"></div>
-        <div class="absolute inset-0 bg-white/40"></div>
-    </div>
-    
-    <!-- Contenedor Principal -->
-    <div class="relative">
-        <header class="sticky top-0 z-50 py-1.5 px-4 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/30 shadow-sm">
-            <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <a href="index.html" class="block w-28 md:w-32 transition-transform hover:scale-105">
-                    <img src="logo.png" alt="Cándido Escamilla Logo" class="w-full h-auto">
-                </a>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sky-900 text-lg font-bold hover:text-sky-600 transition-colors relative group">
-                        Inicio
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="acerca.html" class="text-sky-900 text-lg font-bold hover:text-sky-600 transition-colors relative group">
-                        Acerca de Mí
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="videos.html" class="text-sky-600 text-lg font-bold transition-colors relative group">
-                        Videos
-                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-sky-600"></span>
-                    </a>
-                    <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-sky-600 to-blue-700 text-white px-5 py-1.5 rounded-full font-bold text-base hover:shadow-lg hover:shadow-sky-200 transition-all transform hover:-translate-y-0.5 active:scale-95">
-                        Contrátame
-                    </a>
-                </nav>
-                <!-- Mobile Button -->
-                <div class="md:hidden">
-                    <a href="https://wa.link/776s3i" target="_blank" class="bg-sky-600 text-white p-2 rounded-full shadow-md">
-                        <i data-lucide="phone-call" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Videos Content -->
-        <section class="py-16 md:py-24 px-6 max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-sky-950 mb-6">Galería de Videos</h1>
-                <p class="text-xl text-sky-900/70 max-w-2xl mx-auto font-medium">
-                    Disfruta de mis presentaciones más recientes y revive la emoción de la música en vivo.
-                </p>
-                <div class="w-24 h-1.5 bg-sky-500 mx-auto rounded-full mt-8"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <!-- Video Más Nuevo -->
-                <div class="group relative aspect-video shadow-2xl rounded-[32px] overflow-hidden border-4 border-white/50 premium-card">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/ri3HPfZkr1c" title="Video Más Nuevo" allowfullscreen></iframe>
-                </div>
-                <!-- Video Nuevo -->
-                <div class="group relative aspect-video shadow-2xl rounded-[32px] overflow-hidden border-4 border-white/50 premium-card">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/Hrr3VYOqCmc" title="Nuevo Video" allowfullscreen></iframe>
-                </div>
-                <!-- Video 1 -->
-                <div class="group relative aspect-video shadow-2xl rounded-[32px] overflow-hidden border-4 border-white/50 premium-card">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/xr6ptAxcFRI" title="Video 1" allowfullscreen></iframe>
-                </div>
-                <!-- Video 2 -->
-                <div class="group relative aspect-video shadow-2xl rounded-[32px] overflow-hidden border-4 border-white/50 premium-card">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/0HcWZzPV4nA?start=32" title="Video 2" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="text-center mt-20">
-                <p class="text-lg text-sky-900 font-bold mb-6">¿Quieres ver más? Visita mi canal oficial</p>
-                <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" rel="noopener noreferrer" class="bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-xl inline-flex items-center gap-3">
-                    <i data-lucide="youtube" class="w-6 h-6"></i>
-                    Ir a YouTube
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-sky-950 text-white py-16 px-8 mt-20">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
-                <!-- Branding -->
-                <div>
-                    <div class="bg-white/10 p-4 rounded-2xl inline-block mb-6">
-                        <img src="logo.png" alt="Logo" class="w-40 drop-shadow-lg">
-                    </div>
-                    <p class="text-sky-200/70 font-medium leading-relaxed">
-                        Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.
-                    </p>
-                </div>
-
-                <!-- Enlaces Rápidos -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6 text-white">Navegación</h4>
-                    <ul class="space-y-4 text-sky-200/80 font-medium">
-                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
-                        <li><a href="acerca.html" class="hover:text-white transition-colors">Acerca de Mí</a></li>
-                        <li><a href="videos.html" class="hover:text-white transition-colors">Videos</a></li>
-                        <li><a href="https://wa.link/776s3i" target="_blank" class="hover:text-white transition-colors">Contrataciones</a></li>
-                    </ul>
-                </div>
-
-                <!-- Redes Sociales -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6 text-white">Sígueme</h4>
-                    <div class="flex justify-center md:justify-start gap-4">
-                        <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition-all transform hover:scale-110">
-                            <i data-lucide="youtube" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://wa.link/776s3i" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all transform hover:scale-110">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:scale-110">
-                            <i data-lucide="facebook" class="w-6 h-6"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all transform hover:scale-110">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                    <p class="mt-8 text-sky-200/50 text-sm">
-                        © 2026 Cándido Escamilla. <br class="md:hidden"> Todos los derechos reservados.
-                    </p>
-                </div>
-            </div>
-        </footer>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-blob amb-1"></div>
+        <div class="ambient-blob amb-2"></div>
+        <div class="ambient-blob amb-3"></div>
     </div>
 
-    <!-- Script de inicialización -->
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Inicio</a>
+        <a href="acerca.html">Acerca de Mí</a>
+        <a href="videos.html" onclick="closeMenu()">Videos</a>
+        <a href="https://wa.link/776s3i" target="_blank" class="btn-cta">Contrátame</a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <img src="logo.png" alt="Cándido Escamilla Logo">
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Inicio</a>
+                <a href="acerca.html">Acerca de Mí</a>
+                <a href="videos.html" class="active">Videos</a>
+                <a href="https://wa.link/776s3i" target="_blank" rel="noopener noreferrer" class="btn-cta">Contrátame</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Videos Slider -->
+    <section class="slider-section" style="padding-top: 60px;">
+        <div class="section-title">
+            <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;background:linear-gradient(135deg,var(--text-white),var(--gold-primary));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px;">Galería de Videos</h1>
+            <p>Disfruta de mis presentaciones más recientes y revive la emoción de la música en vivo.</p>
+            <div class="title-accent"></div>
+        </div>
+        <div class="slider-container" id="videoSlider">
+            <div class="slider-track" id="videoTrack">
+                <div class="video-slide">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/ri3HPfZkr1c" title="Video Más Nuevo" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="video-slide">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/Hrr3VYOqCmc" title="Presentación en Vivo" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="video-slide">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/xr6ptAxcFRI" title="Show Musical" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="video-slide">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/0HcWZzPV4nA?start=32" title="Evento Especial" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="slideVideos(-1)" aria-label="Anterior">&#10094;</button>
+                <div class="slider-dots" id="videoDots"></div>
+                <button class="slider-btn" onclick="slideVideos(1)" aria-label="Siguiente">&#10095;</button>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:48px;">
+            <p style="color:var(--text-muted);font-size:1.05rem;font-weight:600;margin-bottom:20px;">¿Quieres ver más? Visita mi canal oficial</p>
+            <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="display:inline-flex;">
+                <i data-lucide="youtube"></i> Ir a YouTube
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo Cándido Escamilla">
+                </div>
+                <p>Liderando el entretenimiento musical con pasión y profesionalismo en cada presentación.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de Mí</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="https://wa.link/776s3i" target="_blank">Contrataciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Sígueme</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UC0q7w1w1iXipglb_lViejSQ" target="_blank" class="social-icon" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    <a href="https://wa.link/776s3i" target="_blank" class="social-icon" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Cándido Escamilla. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
